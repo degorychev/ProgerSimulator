@@ -1,0 +1,50 @@
+﻿<Window x:Class="ProgerSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProgerSimulator"
+        mc:Ignorable="d"
+        Title="Симулятор программиста" Height="452" Width="562.52">
+    <Grid>
+        <TabControl x:Name="tabControl">
+            <TabItem Header="Досье">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <local:AwesomeLabel x:Name="ITRespect" Grid.Column="0" Grid.Row="0" Loaded="ITRespect_Loaded"/>
+                    <local:AwesomeLabel x:Name="LegalRespect" Grid.Column="0" Grid.Row="1" Loaded="LegalRespect_Loaded"/>
+                    <local:AwesomeBasicLabel x:Name="Money" Grid.Column="0" Grid.Row="2" Loaded="Money_Loaded"/>
+                    <local:AwesomeProgress x:Name="Satiety" Grid.Column="0" Grid.Row="3" Loaded="Satiety_Loaded"/>
+                    <local:AwesomeProgress x:Name="Mood" Grid.Column="0" Grid.Row="4" Loaded="Mood_Loaded"/>
+                    <local:AwesomeProgress x:Name="Health" Grid.Column="0" Grid.Row="5" Loaded="Health_Loaded"/>
+                    <local:AwesomeBasicLabel x:Name="DateNow" Grid.Column="0" Grid.Row="6" Loaded="DateNow_Loaded"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Работа">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Рабочий ПК" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Программное обеспечение">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Образование">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

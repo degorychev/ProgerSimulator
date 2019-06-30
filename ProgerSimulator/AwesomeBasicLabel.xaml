@@ -1,0 +1,20 @@
+﻿<UserControl x:Name="MyBasicLabel"  x:Class="ProgerSimulator.AwesomeBasicLabel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ProgerSimulator"
+             mc:Ignorable="d" d:DesignWidth="500">
+    <Grid Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" x:Name="TittleButton" TextWrapping="Wrap" Text="{Binding TitleText, ElementName=MyBasicLabel}" VerticalAlignment="Top" TextAlignment="Center" FontSize="14" Background="#FF0A0A0A" Foreground="White" />
+        <Label x:Name="label"  Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" Content="{Binding ContentBlock, ElementName=MyBasicLabel}"/>
+    </Grid>
+</UserControl>
