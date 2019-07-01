@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProgerSimulator"
         mc:Ignorable="d"
-        Title="Симулятор программиста" Height="452" Width="562.52">
+        Title="Симулятор программиста" Height="460" Width="562.52">
     <Grid>
         <TabControl x:Name="tabControl">
             <TabItem Header="Досье">
@@ -58,7 +58,26 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Рабочий ПК" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <local:AwesomeLabel x:Name="PCSysUnit" Grid.Column="0" Grid.Row="0" Loaded="PCSysUnit_Loaded"/>
+                    <local:AwesomeLabel x:Name="PCRAM" Grid.Column="0" Grid.Row="1" Loaded="PCRAM_Loaded"/>
+                    <local:AwesomeLabel x:Name="PCHDD" Grid.Column="0" Grid.Row="2" Loaded="PCHDD_Loaded"/>
+                    <local:AwesomeLabel x:Name="PCVideoCard" Grid.Column="0" Grid.Row="3" Loaded="PCVideoCard_Loaded"/>
+                    <local:AwesomeLabel x:Name="PCMonitor" Grid.Column="0" Grid.Row="4" Loaded="PCMonitor_Loaded"/>
+                    <local:AwesomeLabel x:Name="PCNetwork" Grid.Column="0" Grid.Row="5" Loaded="PCNetwork_Loaded"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Программное обеспечение">
                 <Grid Background="#FFE5E5E5"/>

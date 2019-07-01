@@ -31,7 +31,7 @@ namespace ProgerSimulator
             ITRespect.ContentBlock = "Опыт: 0 \nСтатус: Ламер";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/itrep.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/itrep.png");
             image.EndInit();
             ITRespect.image.Source = image;
         }
@@ -42,7 +42,7 @@ namespace ProgerSimulator
             LegalRespect.ContentBlock = "Карма: 0 \nСтатус: Гражданин";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/LegalRep.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/LegalRep.png");
             image.EndInit();
             LegalRespect.image.Source = image;
         }
@@ -59,7 +59,7 @@ namespace ProgerSimulator
             Satiety.Progress = 70;
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Satiety.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/Satiety.png");
             image.EndInit();
             Satiety.image.Source = image;
         }
@@ -70,7 +70,7 @@ namespace ProgerSimulator
             Mood.Progress = 75;
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Mood.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/Mood.png");
             image.EndInit();
             Mood.image.Source = image;
         }
@@ -81,7 +81,7 @@ namespace ProgerSimulator
             Health.Progress = 100;
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Health.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/Health.png");
             image.EndInit();
             Health.image.Source = image;
         }
@@ -98,7 +98,7 @@ namespace ProgerSimulator
             MainJob.ContentBlock = "Безработный \nЗП: 0 р.";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work/Work.png");
             image.EndInit();
             MainJob.image.Source = image;
         }
@@ -109,7 +109,7 @@ namespace ProgerSimulator
             ExtraWork.ContentBlock = "Дополнительный заработок";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/ExtraWork.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work/ExtraWork.png");
             image.EndInit();
             ExtraWork.image.Source = image;
         }
@@ -120,7 +120,7 @@ namespace ProgerSimulator
             Bank.ContentBlock = "На вашем счету: 0 р. \nВаша задолженность: 0 р.";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Bank.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work/Bank.png");
             image.EndInit();
             Bank.image.Source = image;
         }
@@ -131,7 +131,7 @@ namespace ProgerSimulator
             House.ContentBlock = "Нет недвижимости";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/House.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work/House.png");
             image.EndInit();
             House.image.Source = image;
         }
@@ -142,7 +142,7 @@ namespace ProgerSimulator
             Transport.ContentBlock = "Нет транспорта";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Transport.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work/Transport.png");
             image.EndInit();
             Transport.image.Source = image;
         }
@@ -153,7 +153,7 @@ namespace ProgerSimulator
             Business.ContentBlock = "Нет источника доходов";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Business.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work/Business.png");
             image.EndInit();
             Business.image.Source = image;
         }
@@ -164,9 +164,75 @@ namespace ProgerSimulator
             StockExchange.ContentBlock = "Капитализация корпораций";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
-            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/StockExchange.png");
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work/StockExchange.png");
             image.EndInit();
             StockExchange.image.Source = image;
+        }
+
+        private void PCSysUnit_Loaded(object sender, RoutedEventArgs e)
+        {
+            PCSysUnit.TitleText = "Системный блок";
+            PCSysUnit.ContentBlock = "Системны блок с Intel Pentium II";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/PC/CPU.png");
+            image.EndInit();
+            PCSysUnit.image.Source = image;
+        }
+
+        private void PCRAM_Loaded(object sender, RoutedEventArgs e)
+        {
+            PCRAM.TitleText = "Оперативная память";
+            PCRAM.ContentBlock = "DRAM 32 Mb";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/PC/DRAM.png");
+            image.EndInit();
+            PCRAM.image.Source = image;
+        }
+
+        private void PCHDD_Loaded(object sender, RoutedEventArgs e)
+        {
+            PCHDD.TitleText = "Жесткий диск";
+            PCHDD.ContentBlock = "HDD 20 GB";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/PC/HDD.png");
+            image.EndInit();
+            PCHDD.image.Source = image;
+        }
+
+        private void PCVideoCard_Loaded(object sender, RoutedEventArgs e)
+        {
+            PCVideoCard.TitleText = "Видеокарта";
+            PCVideoCard.ContentBlock = "GeForce 256";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/PC/GPU.png");
+            image.EndInit();
+            PCVideoCard.image.Source = image;
+        }
+
+        private void PCMonitor_Loaded(object sender, RoutedEventArgs e)
+        {
+            PCMonitor.TitleText = "Монитор";
+            PCMonitor.ContentBlock = "15 \", CRT";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/PC/LCD.png");
+            image.EndInit();
+            PCMonitor.image.Source = image;
+        }
+
+        private void PCNetwork_Loaded(object sender, RoutedEventArgs e)
+        {
+            PCNetwork.TitleText = "Сеть";
+            PCNetwork.ContentBlock = "dial-UP 56 kbit/s";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/PC/Ethernet.png");
+            image.EndInit();
+            PCNetwork.image.Source = image;
         }
     }
 }

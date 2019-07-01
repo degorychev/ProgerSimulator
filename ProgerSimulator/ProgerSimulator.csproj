@@ -116,28 +116,36 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\LegalRep.png" />
+    <Resource Include="Images\Main\LegalRep.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\itrep.png" />
+    <Resource Include="Images\Main\itrep.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Satiety.png" />
+    <Resource Include="Images\Main\Satiety.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Mood.png" />
+    <Resource Include="Images\Main\Mood.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Health.png" />
+    <Resource Include="Images\Main\Health.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Bank.png" />
-    <Resource Include="Images\Business.png" />
-    <Resource Include="Images\ExtraWork.png" />
-    <Resource Include="Images\House.png" />
-    <Resource Include="Images\StockExchange.png" />
-    <Resource Include="Images\Transport.png" />
-    <Resource Include="Images\Work.png" />
+    <Resource Include="Images\Work\Bank.png" />
+    <Resource Include="Images\Work\Business.png" />
+    <Resource Include="Images\Work\ExtraWork.png" />
+    <Resource Include="Images\Work\House.png" />
+    <Resource Include="Images\Work\StockExchange.png" />
+    <Resource Include="Images\Work\Transport.png" />
+    <Resource Include="Images\Work\Work.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PC\CPU.png" />
+    <Resource Include="Images\PC\DRAM.png" />
+    <Resource Include="Images\PC\Ethernet.png" />
+    <Resource Include="Images\PC\GPU.png" />
+    <Resource Include="Images\PC\HDD.png" />
+    <Resource Include="Images\PC\LCD.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
