@@ -57,7 +57,7 @@
                     <local:AwesomeLabel x:Name="StockExchange" Grid.Column="0" Grid.Row="6" Loaded="StockExchange_Loaded"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Рабочий ПК" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81">
+            <TabItem Header="Рабочий ПК">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -80,7 +80,22 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Программное обеспечение">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <local:AwesomeLabel x:Name="OS" Grid.Column="0" Grid.Row="0" Loaded="OS_Loaded"/>
+                    <local:AwesomeLabel x:Name="AntiVirus" Grid.Column="0" Grid.Row="1" Loaded="AntiVirus_Loaded"/>
+                    <local:AwesomeLabel x:Name="IDE" Grid.Column="0" Grid.Row="2" Loaded="IDE_Loaded"/>
+                    <local:AwesomeLabel x:Name="Games" Grid.Column="0" Grid.Row="3" Loaded="Games_Loaded"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Образование">
                 <Grid Background="#FFE5E5E5"/>

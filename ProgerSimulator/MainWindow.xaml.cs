@@ -172,7 +172,7 @@ namespace ProgerSimulator
         private void PCSysUnit_Loaded(object sender, RoutedEventArgs e)
         {
             PCSysUnit.TitleText = "Системный блок";
-            PCSysUnit.ContentBlock = "Системны блок с Intel Pentium II";
+            PCSysUnit.ContentBlock = "Системный блок с Intel Pentium II";
             BitmapImage image = new BitmapImage();
             image.BeginInit();
             image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/PC/CPU.png");
@@ -233,6 +233,50 @@ namespace ProgerSimulator
             image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/PC/Ethernet.png");
             image.EndInit();
             PCNetwork.image.Source = image;
+        }
+
+        private void OS_Loaded(object sender, RoutedEventArgs e)
+        {
+            OS.TitleText = "Операционная система";
+            OS.ContentBlock = "Windows 95";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Software/OS.png");
+            image.EndInit();
+            OS.image.Source = image;
+        }
+
+        private void AntiVirus_Loaded(object sender, RoutedEventArgs e)
+        {
+            AntiVirus.TitleText = "Антивирус";
+            AntiVirus.ContentBlock = "Stop!";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Software/AntiVirus.png");
+            image.EndInit();
+            AntiVirus.image.Source = image;
+        }
+
+        private void IDE_Loaded(object sender, RoutedEventArgs e)
+        {
+            IDE.TitleText = "Разработка";
+            IDE.ContentBlock = "Нет";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Software/IDE.png");
+            image.EndInit();
+            IDE.image.Source = image;
+        }
+
+        private void Games_Loaded(object sender, RoutedEventArgs e)
+        {
+            Games.TitleText = "Игры";
+            Games.ContentBlock = "Нет";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Software/Games.png");
+            image.EndInit();
+            Games.image.Source = image;
         }
     }
 }

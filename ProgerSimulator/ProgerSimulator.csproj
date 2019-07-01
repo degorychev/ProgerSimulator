@@ -147,5 +147,11 @@
     <Resource Include="Images\PC\HDD.png" />
     <Resource Include="Images\PC\LCD.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Software\AntiVirus.png" />
+    <Resource Include="Images\Software\Games.png" />
+    <Resource Include="Images\Software\IDE.png" />
+    <Resource Include="Images\Software\OS.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
