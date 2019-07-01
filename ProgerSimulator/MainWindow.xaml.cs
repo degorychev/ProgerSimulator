@@ -23,46 +23,59 @@ namespace ProgerSimulator
         public MainWindow()
         {
             InitializeComponent();
+            UpdateAll();
+        }
+        player Player = new player("Вася");
+
+        private void UpdateAll()
+        {
+            ITRespect.ContentBlock = Player.getItRep();
+            LegalRespect.ContentBlock = Player.getLegalRep();
+            Money.ContentBlock = Player.getMoney();
+            Satiety.Progress = Player.Satiety;
+            Mood.Progress = Player.Mood;
+            Health.Progress = Player.Health;
+            MainJob.ContentBlock = Player.MainJob.ToStringToBlock();
         }
 
         private void ITRespect_Loaded(object sender, RoutedEventArgs e)
         {
             ITRespect.TitleText = "IT репутация";
-            ITRespect.ContentBlock = "Опыт: 0 \nСтатус: Ламер";
+            //ITRespect.ContentBlock = Player.getItRep();
             ITRespect.image.Source = ImageLoad(new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/itrep.png"));
         }
 
         private void LegalRespect_Loaded(object sender, RoutedEventArgs e)
         {
             LegalRespect.TitleText = "Правовая репутация";
-            LegalRespect.ContentBlock = "Карма: 0 \nСтатус: Гражданин";
+            //LegalRespect.ContentBlock = "Карма: 0 \nСтатус: Гражданин";
             LegalRespect.image.Source = ImageLoad(new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/LegalRep.png"));
         }
 
         private void Money_Loaded(object sender, RoutedEventArgs e)
         {
             Money.TitleText = "Деньги";
-            Money.ContentBlock = "1000 р.";
+            //Money.ContentBlock = "1000 р.";
         }
 
         private void Satiety_Loaded(object sender, RoutedEventArgs e)
         {
             Satiety.TitleText = "Сытость";
-            Satiety.Progress = 70;
+            //Satiety.Progress = 70;
             Satiety.image.Source = ImageLoad(new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/Satiety.png"));
         }
 
         private void Mood_Loaded(object sender, RoutedEventArgs e)
         {
             Mood.TitleText = "Настроение";
-            Mood.Progress = 75;
+            //Mood.Progress = 75;
             Mood.image.Source = ImageLoad(new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/Mood.png"));
         }
 
         private void Health_Loaded(object sender, RoutedEventArgs e)
         {
             Health.TitleText = "Здоровье";
-            Health.Progress = 100;
+            //Health.Progress = 100;
             Health.image.Source = ImageLoad(new Uri("pack://application:,,,/ProgerSimulator;component/Images/Main/Health.png"));
         }
 
@@ -75,7 +88,7 @@ namespace ProgerSimulator
         private void MainJob_Loaded(object sender, RoutedEventArgs e)
         {
             MainJob.TitleText = "Работа";
-            MainJob.ContentBlock = "Безработный \nЗП: 0 р.";
+            //MainJob.ContentBlock = "Безработный \nЗП: 0 р.";
             MainJob.image.Source = ImageLoad(new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work/Work.png"));
         }
 
@@ -214,13 +227,19 @@ namespace ProgerSimulator
             Books.image.Source = ImageLoad(new Uri("pack://application:,,,/ProgerSimulator;component/Images/Education/Books.png"));
         }
 
-        private BitmapImage ImageLoad(Uri path)
+        public static BitmapImage ImageLoad(Uri path)
         {
             BitmapImage image = new BitmapImage();
             image.BeginInit();
             image.UriSource = path;
             image.EndInit();
             return image;
+        }
+
+        private void MainJob_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            ViewList listJob = new ViewList("Список вакансий", Job.GetJobsList(), Player.getSkills());
+            listJob.ShowDialog();
         }
     }
 }

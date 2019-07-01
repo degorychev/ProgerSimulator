@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProgerSimulator"
         mc:Ignorable="d"
-        Title="Симулятор программиста" Height="460" Width="562.52">
+        Title="Симулятор программиста" Height="460" Width="446.52">
     <Grid>
         <TabControl x:Name="tabControl">
             <TabItem Header="Досье">
@@ -48,7 +48,7 @@
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <local:AwesomeLabel x:Name="MainJob" Grid.Column="0" Grid.Row="0" Loaded="MainJob_Loaded"/>
+                    <local:AwesomeLabel x:Name="MainJob" Grid.Column="0" Grid.Row="0" Loaded="MainJob_Loaded" MouseUp="MainJob_MouseUp"/>
                     <local:AwesomeLabel x:Name="ExtraWork" Grid.Column="0" Grid.Row="1" Loaded="ExtraWork_Loaded"/>
                     <local:AwesomeLabel x:Name="Bank" Grid.Column="0" Grid.Row="2" Loaded="Bank_Loaded"/>
                     <local:AwesomeLabel x:Name="House" Grid.Column="0" Grid.Row="3" Loaded="House_Loaded"/>

@@ -20,6 +20,7 @@ namespace ProgerSimulator
     /// </summary>
     public partial class AwesomeLabel : UserControl
     {
+        public int id;
         public AwesomeLabel()
         {
             InitializeComponent();
