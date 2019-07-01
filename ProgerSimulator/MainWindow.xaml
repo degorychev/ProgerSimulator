@@ -34,7 +34,28 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Работа">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <local:AwesomeLabel x:Name="MainJob" Grid.Column="0" Grid.Row="0" Loaded="MainJob_Loaded"/>
+                    <local:AwesomeLabel x:Name="ExtraWork" Grid.Column="0" Grid.Row="1" Loaded="ExtraWork_Loaded"/>
+                    <local:AwesomeLabel x:Name="Bank" Grid.Column="0" Grid.Row="2" Loaded="Bank_Loaded"/>
+                    <local:AwesomeLabel x:Name="House" Grid.Column="0" Grid.Row="3" Loaded="House_Loaded"/>
+                    <local:AwesomeLabel x:Name="Transport" Grid.Column="0" Grid.Row="4" Loaded="Transport_Loaded"/>
+                    <local:AwesomeLabel x:Name="Business" Grid.Column="0" Grid.Row="5" Loaded="Business_Loaded"/>
+                    <local:AwesomeLabel x:Name="StockExchange" Grid.Column="0" Grid.Row="6" Loaded="StockExchange_Loaded"/>
+                </Grid>
             </TabItem>
             <TabItem Header="Рабочий ПК" HorizontalAlignment="Left" VerticalAlignment="Top" Width="81">
                 <Grid Background="#FFE5E5E5"/>

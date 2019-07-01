@@ -91,5 +91,82 @@ namespace ProgerSimulator
             DateNow.TitleText = "Дата";
             DateNow.ContentBlock = DateTime.Now.ToShortDateString();
         }
+
+        private void MainJob_Loaded(object sender, RoutedEventArgs e)
+        {
+            MainJob.TitleText = "Работа";
+            MainJob.ContentBlock = "Безработный \nЗП: 0 р.";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Work.png");
+            image.EndInit();
+            MainJob.image.Source = image;
+        }
+
+        private void ExtraWork_Loaded(object sender, RoutedEventArgs e)
+        {
+            ExtraWork.TitleText = "Подработка";
+            ExtraWork.ContentBlock = "Дополнительный заработок";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/ExtraWork.png");
+            image.EndInit();
+            ExtraWork.image.Source = image;
+        }
+
+        private void Bank_Loaded(object sender, RoutedEventArgs e)
+        {
+            Bank.TitleText = "Банк";
+            Bank.ContentBlock = "На вашем счету: 0 р. \nВаша задолженность: 0 р.";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Bank.png");
+            image.EndInit();
+            Bank.image.Source = image;
+        }
+
+        private void House_Loaded(object sender, RoutedEventArgs e)
+        {
+            House.TitleText = "Недвижимость";
+            House.ContentBlock = "Нет недвижимости";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/House.png");
+            image.EndInit();
+            House.image.Source = image;
+        }
+
+        private void Transport_Loaded(object sender, RoutedEventArgs e)
+        {
+            Transport.TitleText = "Транспорт";
+            Transport.ContentBlock = "Нет транспорта";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Transport.png");
+            image.EndInit();
+            Transport.image.Source = image;
+        }
+
+        private void Business_Loaded(object sender, RoutedEventArgs e)
+        {
+            Business.TitleText = "Бизнес";
+            Business.ContentBlock = "Нет источника доходов";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Business.png");
+            image.EndInit();
+            Business.image.Source = image;
+        }
+
+        private void StockExchange_Loaded(object sender, RoutedEventArgs e)
+        {
+            StockExchange.TitleText = "Фондовая биржа";
+            StockExchange.ContentBlock = "Капитализация корпораций";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/StockExchange.png");
+            image.EndInit();
+            StockExchange.image.Source = image;
+        }
     }
 }
