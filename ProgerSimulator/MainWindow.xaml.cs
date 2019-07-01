@@ -278,5 +278,40 @@ namespace ProgerSimulator
             image.EndInit();
             Games.image.Source = image;
         }
+
+        private void Education_Loaded(object sender, RoutedEventArgs e)
+        {
+            Education.TitleText = "Образование";
+            Education.ContentBlock = "Нет образования";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Education/Education.png");
+            image.EndInit();
+            Education.image.Source = image;
+        }
+
+        private void Courses_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            Courses.TitleText = "Курсы";
+            Courses.ContentBlock = "Не пройдено курсов";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Education/Courses.png");
+            image.EndInit();
+            Courses.image.Source = image;
+        }
+
+        private void Books_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            Books.TitleText = "Книги";
+            Books.ContentBlock = "Не прочтено книг";
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.UriSource = new Uri("pack://application:,,,/ProgerSimulator;component/Images/Education/Books.png");
+            image.EndInit();
+            Books.image.Source = image;
+        }
     }
 }

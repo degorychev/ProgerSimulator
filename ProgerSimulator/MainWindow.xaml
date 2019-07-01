@@ -98,7 +98,20 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Образование">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    
+                    <local:AwesomeLabel x:Name="Education" Grid.Column="0" Grid.Row="0" Loaded="Education_Loaded"/>
+                    <local:AwesomeLabel x:Name="Courses" Grid.Column="0" Grid.Row="1" Loaded="Courses_Loaded"/>
+                    <local:AwesomeLabel x:Name="Books" Grid.Column="0" Grid.Row="2" Loaded="Books_Loaded"/>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
