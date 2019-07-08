@@ -20,10 +20,16 @@ namespace ProgerSimulator
     /// </summary>
     public partial class ViewList : Window
     {
+        public Job selected;
+        public bool isok = false;
+
         List<Job> List;
+
+        Requirements PlayerSkillInput;
         public ViewList(string TitleWindow, List<Job> inputList, Requirements PlayerSkill)
         {
             InitializeComponent();
+            PlayerSkillInput = PlayerSkill;
             this.Title = TitleWindow;
             int i = 0;
             List = inputList;
@@ -43,13 +49,23 @@ namespace ProgerSimulator
 
         private Uri GetUri(Job job, Requirements skill)
         {
-            return new Uri("pack://application:,,,/ProgerSimulator;component/Images/Education/Books.png");
+            if (job.SkillAnalyze(skill))
+                return new Uri("pack://application:,,,/ProgerSimulator;component/Images/Interface/up.png");
+            else
+                return new Uri("pack://application:,,,/ProgerSimulator;component/Images/Interface/block.png");
         }
 
         private void Click(object sender, MouseButtonEventArgs args)
         {
             int id = ((AwesomeLabel)sender).id;
-            MessageBox.Show(List[id].ToStringToBlock());
+            if(List[id].SkillAnalyze(PlayerSkillInput))
+            {
+                selected = List[id];
+                isok = true;
+                this.Close();
+            }
+            else
+                MessageBox.Show(List[id].SkillAnalyzeString(PlayerSkillInput));
         }
     }
 }

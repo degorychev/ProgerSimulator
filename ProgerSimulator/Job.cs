@@ -93,5 +93,20 @@ namespace ProgerSimulator
                 return false;
             return true;
         }
+
+        public string SkillAnalyzeString(Requirements CurrentExperience)
+        {
+            StringBuilder output = new StringBuilder("Вам необходимы курсы: ");
+
+            foreach (var item in Requirements.Courses)
+                if (!CurrentExperience.Courses.Contains(item))
+                    output.Append(item.ToString());
+            output.Append("\n Вам необходимо образование:");
+            foreach (var item in Requirements.Education)
+                if (!CurrentExperience.Education.Contains(item))
+                    output.Append(item.ToString());
+            output.Append("\n Необходимый скил:"+ Requirements.Skill);
+            return output.ToString();
+        }
     }
 }

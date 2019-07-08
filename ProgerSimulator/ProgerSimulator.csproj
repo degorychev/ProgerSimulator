@@ -167,5 +167,11 @@
     <Resource Include="Images\Education\Courses.png" />
     <Resource Include="Images\Education\Education.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Interface\up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Interface\block.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

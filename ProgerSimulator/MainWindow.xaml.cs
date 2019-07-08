@@ -240,6 +240,9 @@ namespace ProgerSimulator
         {
             ViewList listJob = new ViewList("Список вакансий", Job.GetJobsList(), Player.getSkills());
             listJob.ShowDialog();
+            if (listJob.isok)
+                Player.MainJob = listJob.selected;
+            UpdateAll();
         }
     }
 }

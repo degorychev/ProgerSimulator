@@ -15,7 +15,7 @@ namespace ProgerSimulator
         public int Satiety { get; } //Настроение
         public int Mood { get; } //Сытость
         public int Health { get; } //Здоровье
-        public Job MainJob { get; } //Основная работа
+        public Job MainJob { get; set; } //Основная работа
         public Requirements getSkills()
         {
             Requirements output = new Requirements(new HashSet<int>(), new HashSet<int>(), ITRespect);
